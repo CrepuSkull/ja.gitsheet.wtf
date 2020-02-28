@@ -1,282 +1,273 @@
 <!doctype html>
-<html lang="ja">
-
-<head>
+<html lang="en">
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <!-- Style -->
-    <link rel="stylesheet" href="https://gitsheet.wtf/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,400,700&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel='shortcut icon' type='image/x-icon' href='https://gitsheet.wtf/favicon.ico' />
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 
     <!-- HTML Meta Tags -->
     <title>GitSheet</title>
-    <meta name="description"
-        content="GitSheet is a simple git cheat sheet reference for common git commands saving you time and helping you learn how to use branches, show logs, undo changes, create tags, stashes and more.">
+    <meta name="description" content="GitSheet is a simple git cheat sheet reference for common git commands saving you time and helping you learn how to use branches, show logs, undo changes, create tags, stashes and more.">
 
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="GitSheet">
-    <meta itemprop="description"
-        content="GitSheet is a simple git cheat sheet reference for common git commands saving you time and helping you learn how to use branches, show logs, undo changes, create tags, stashes and more.">
+    <meta itemprop="description" content="GitSheet is a simple git cheat sheet reference for common git commands saving you time and helping you learn how to use branches, show logs, undo changes, create tags, stashes and more.">
     <meta itemprop="image" content="https://gitsheet.wtf/meta-image.png">
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://gitsheet.wtf">
     <meta property="og:type" content="website">
     <meta property="og:title" content="GitSheet">
-    <meta property="og:description"
-        content="GitSheet is a simple git cheat sheet reference for common git commands saving you time and helping you learn how to use branches, show logs, undo changes, create tags, stashes and more.">
+    <meta property="og:description" content="GitSheet is a simple git cheat sheet reference for common git commands saving you time and helping you learn how to use branches, show logs, undo changes, create tags, stashes and more.">
     <meta property="og:image" content="https://gitsheet.wtf/meta-image.png">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="GitSheet">
-    <meta name="twitter:description"
-        content="GitSheet is a simple git cheat sheet reference for common git commands saving you time and helping you learn how to use branches, show logs, undo changes, create tags, stashes and more.">
+    <meta name="twitter:description" content="GitSheet is a simple git cheat sheet reference for common git commands saving you time and helping you learn how to use branches, show logs, undo changes, create tags, stashes and more.">
     <meta name="twitter:image" content="https://gitsheet.wtf/meta-image.png">
-</head>
-
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-        <h1>💻 GitSheet</h1>
-        <p>A dead simple git cheatsheet. <a href="https://twitter.com/tiivik" target="_blank">Follow @tiivik</a> for
-            updates!</p>
-        <table class="table table-borderless table-sm _table-striped">
-            <!-- Branches -->
-            <thead class="thead-light">
-                <tr>
-                    <th scope="col">ブランチ</th>
-                    <th scope="col"></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row"><code type="text">git branch</code></th>
-                    <td>すべてのローカルブランチの一覧を表示する。</td>
-                    <td>
-                        <input name="git branch" class="copyEl" type="button" value="Copy" readonly />
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><code type="text">git branch -a</code></th>
-                    <td>すべてのリモートブランチとローカルブランチの一覧を表示する。</td>
-                    <td>
-                        <input name="git branch -a" class="copyEl" type="button" value="Copy" readonly />
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git checkout -b branch_name</code></th>
-                    <td>ローカルブランチを作成し、そのブランチに切り替える。</td>
-                    <td>
-                        <input name="git checkout -b branch_name" class="copyEl" type="button" value="Copy" readonly />
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git checkout branch_name</code></th>
-                    <td>既存のローカルブランチに切り替える。</td>
-                    <td><input name="git checkout branch_name" class="copyEl" type="button" value="Copy" readonly />
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git push origin branch_name</code></th>
-                    <td>現在のブランチを指定したリモートブランチにプッシュする。</td>
-                    <td><input name="git push origin branch_name" class="copyEl" type="button" value="Copy" readonly />
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git branch -m new_name</code></th>
-                    <td>現在のブランチの名前を変更する。</td>
-                    <td><input name="git branch -m new_name" class="copyEl" type="button" value="Copy" readonly /></td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git branch -d branch_name</code></th>
-                    <td>指定したローカルブランチを削除する。</td>
-                    <td><input name="git branch -d branch_name" class="copyEl" type="button" value="Copy" readonly />
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git push origin :branch_name</code></th>
-                    <td>指定したリモートブランチを削除する。</td>
-                    <td><input name="git push origin :branch_name" class="copyEl" type="button" value="Copy" readonly />
-                    </td>
-                </tr>
-            </tbody>
+      <h1>💻 GitSheet</h1>
+      <p>A dead simple git cheatsheet. <a href="https://twitter.com/tiivik" target="_blank">Follow @tiivik</a> for updates!</p>
+      <table class="table table-borderless table-sm _table-striped">
+        <!-- Branches -->
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Branches.</th>
+            <th scope="col"></th>
+            <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><code type="text">git branch</code></th>
+                <td>List all local branches.</td>
+                <td>
+                    <input name="git branch" class="copyEl" type="button" value="Copy" readonly/>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><code type="text">git branch -a</code></th>
+                <td>List remote and local branches.</td>
+                <td>
+                    <input name="git branch -a" class="copyEl" type="button" value="Copy" readonly/>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git checkout -b branch_name</code></th>
+                <td>Create a local branch and switch to it.</td>
+                <td>
+                    <input name="git checkout -b branch_name" class="copyEl" type="button" value="Copy" readonly/>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git checkout branch_name</code></th>
+                <td>Switch to an existing branch.</td>
+                <td><input name="git checkout branch_name" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git push origin branch_name</code></th>
+                <td>Push branch to remote.</td>
+                <td><input name="git push origin branch_name" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git branch -m new_name</code></th>
+                <td>Rename current branch.</td>
+                <td><input name="git branch -m new_name" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git branch -d branch_name</code></th>
+                <td>Delete a local branch.</td>
+                <td><input name="git branch -d branch_name" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git push origin :branch_name</code></th>
+                <td>Delete a remote branch.</td>
+                <td><input name="git push origin :branch_name" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+        </tbody>
 
-            <!-- Logs -->
-            <thead class="thead-light">
-                <tr>
-                    <th scope="col">ログ</th>
-                    <th scope="col"></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row"><code type="text">git log --oneline</code></th>
-                    <td>コミット履歴を一行ずつ表示する。</td>
-                    <td>
-                        <input name="git log --oneline" class="copyEl" type="button" value="Copy" readonly />
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git log -2</code></th>
-                    <td>最新の2件のコミット履歴を表示する。</td>
-                    <td><input name="git log -2" class="copyEl" type="button" value="Copy" readonly /></td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git log -p -2</code></th>
-                    <td>最新の2件のコミット履歴を差分付きで表示する。</td>
-                    <td><input name="git log -p -2" class="copyEl" type="button" value="Copy" readonly /></td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git diff</code></th>
-                    <td>現在の作業ツリーでローカル上のファイルへ加えられた変更をすべて表示する。</td>
-                    <td><input name="git diff" class="copyEl" type="button" value="Copy" readonly /></td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git diff file_name</code></th>
-                    <td>指定したファイルへ加えられた変更の差分を表示する。</td>
-                    <td><input name="git diff file_name" class="copyEl" type="button" value="Copy" readonly /></td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git blame file_name</code></th>
-                    <td>指定したファイル内で誰が何をいつ変更したかを表示する。</td>
-                    <td><input name="git blame file_name" class="copyEl" type="button" value="Copy" readonly /></td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git remote show origin</code></th>
-                    <td>ローカルブランチとリモートブランチのマッピングを表示する。</td>
-                    <td><input name="git remote show origin" class="copyEl" type="button" value="Copy" readonly /></td>
-                </tr>
-            </tbody>
+        <!-- Logs -->
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Logs.</th>
+                <th scope="col"></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><code type="text">git log --oneline</code></th>
+                <td>Show commit history in single lines.</td>
+                <td>
+                    <input name="git log --oneline" class="copyEl" type="button" value="Copy" readonly/>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git log -2</code></th>
+                <td>Show commit history for last N commits.</td>
+                <td><input name="git log -2" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git log -p -2</code></th>
+                <td>Show commit history for last N commits with diff.</td>
+                <td><input name="git log -p -2" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git diff</code></th>
+                <td>Show all local file changes in the working tree.</td>
+                <td><input name="git diff" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git diff myfile</code></th>
+                <td>Show changes made to a file.</td>
+                <td><input name="git diff myfile" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git blame myfile</code></th>
+                <td>Show who changed what & when in a file.</td>
+                <td><input name="git blame myfile" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git remote show origin</code></th>
+                <td>Show remote branches and their mapping to local.</td>
+                <td><input name="git remote show origin" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+        </tbody>
 
-            <!-- Cleanup -->
-            <thead class="thead-light">
-                <tr>
-                    <th scope="col">クリーンアップ</th>
-                    <th scope="col"></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row"><code type="text">git clean -f</code></th>
-                    <td>追跡されていないファイルをすべて削除する。</td>
-                    <td>
-                        <input name="git clean -f" class="copyEl" type="button" value="Copy" readonly />
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git clean -df</code></th>
-                    <td>追跡されていないファイルとディレクトリをすべて削除する。</td>
-                    <td><input name="git clean -df" class="copyEl" type="button" value="Copy" readonly /></td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git checkout -- .</code></th>
-                    <td>ローカル上のファイルへの変更をすべて元に戻す。</td>
-                    <td><input name="git checkout -- ." class="copyEl" type="button" value="Copy" readonly /></td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git reset HEAD file_name</code></th>
-                    <td>ステージされたファイルをステージされていない状態に戻す。</td>
-                    <td><input name="git reset HEAD file_name" class="copyEl" type="button" value="Copy" readonly />
-                    </td>
-                </tr>
-            </tbody>
+        <!-- Cleanup -->
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Cleanup.</th>
+                <th scope="col"></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><code type="text">git clean -f</code></th>
+                <td>Delete all untracked files.</td>
+                <td>
+                    <input name="git clean -f" class="copyEl" type="button" value="Copy" readonly/>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git clean -df</code></th>
+                <td>Delete all untracked files and directories.</td>
+                <td><input name="git clean -df" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git checkout -- .</code></th>
+                <td>Undo local modifications to all files.</td>
+                <td><input name="git checkout -- ." class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git reset HEAD myfile</code></th>
+                <td>Unstage a file.</td>
+                <td><input name="git reset HEAD myfile" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+        </tbody>
 
-            <!-- Tags -->
-            <thead class="thead-light">
-                <tr>
-                    <th scope="col">タグ</th>
-                    <th scope="col"></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row"><code type="text">git tag</code></th>
-                    <td>すべてのタグを表示する。</td>
-                    <td>
-                        <input name="git tag" class="copyEl" type="button" value="Copy" readonly />
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git tag -a tag_name -m "tag message"</code></th>
-                    <td>新しいタグを作成する。</td>
-                    <td><input name="git tag -a tag_name -m 'tag message'" class="copyEl" type="button" value="Copy"
-                            readonly /></td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git push --tags</code></th>
-                    <td>すべてのタグをリモートへプッシュする。</td>
-                    <td><input name="git push --tags" class="copyEl" type="button" value="Copy" readonly /></td>
-                </tr>
-            </tbody>
+        <!-- Tags -->
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Tags.</th>
+                <th scope="col"></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><code type="text">git pull --tags</code></th>
+                <td>Get remote tags.</td>
+                <td>
+                    <input name="git pull --tags" class="copyEl" type="button" value="Copy" readonly/>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><code type="text">git checkout tag_name</code></th>
+                <td>Switch to an existing tag.</td>
+                <td>
+                    <input name="git checkout tag_name" class="copyEl" type="button" value="Copy" readonly/>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><code type="text">git tag</code></th>
+                <td>List all tags.</td>
+                <td>
+                    <input name="git tag" class="copyEl" type="button" value="Copy" readonly/>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git tag -a tag_name -m "tag message"</code></th>
+                <td>Create a new tag.</td>
+                <td><input name="git tag -a tag_name -m 'tag message'" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git push --tags</code></th>
+                <td>Push all tags to remote repo.</td>
+                <td><input name="git push --tags" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+        </tbody>        
 
-            <!-- Stashes -->
-            <thead class="thead-light">
-                <tr>
-                    <th scope="col">スタッシュ</th>
-                    <th scope="col"></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row"><code type="text">git stash save "stash_name" && git stash</code></th>
-                    <td>ローカル上のファイルへの変更をスタッシュする。</td>
-                    <td>
-                        <input name="git stash save 'stash_name' && git stash" class="copyEl" type="button" value="Copy"
-                            readonly />
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git stash list</code></th>
-                    <td>すべてのスタッシュの一覧を表示する。</td>
-                    <td><input name="git stash list" class="copyEl" type="button" value="Copy" readonly /></td>
-                </tr>
-                <tr>
-                    <th scope="row"><code>git stash pop</code></th>
-                    <td>最新のスタッシュを適用し、そのスタッシュを削除する。</td>
-                    <td><input name="git stash pop" class="copyEl" type="button" value="Copy" readonly /></td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- Stashes -->
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Stashes.</th>
+                <th scope="col"></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><code type="text">git stash save "stash name" && git stash</code></th>
+                <td>Save changes to a stash.</td>
+                <td>
+                    <input name="git stash save 'stash_name' && git stash" class="copyEl" type="button" value="Copy" readonly/>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git stash list</code></th>
+                <td>List all stashes.</td>
+                <td><input name="git stash list" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+            <tr>
+                <th scope="row"><code>git stash pop</code></th>
+                <td>Apply a stash and delete it from stash list.</td>
+                <td><input name="git stash pop" class="copyEl" type="button" value="Copy" readonly/></td>
+            </tr>
+        </tbody>
+      </table>
     </div>
     <div>
         <footer>
-            <div>👋 Say hi! <a href="https://twitter.com/tiivik" target="_blank">@tiivik</a> or <a
-                    href="https://www.buymeacoffee.com/NscyVhWZG" target="_blank">buy me a coffee ☕️.</a>
-                    このページは<a href="https://twitter.com/uniuniunicode" target="_blank">@uniuniunicode</a>によって翻訳されました。
-            </div>
+            <div>👋 Say hi! <a href="https://twitter.com/tiivik" target="_blank">@tiivik</a> or <a href="https://www.buymeacoffee.com/NscyVhWZG" target="_blank">buy me a coffee ☕️.</a></div>
         </footer>
     </div>
     <!-- Copy -->
-    <script src="https://gitsheet.wtf/js/copy.js"></script>
-    <script data-name="BMC-Widget" src="https://cdn.buymeacoffee.com/widget/1.0.0/prod/widget.prod.min.js"
-        data-id="rainer" data-description="Support me on Buy me a coffee!"
-        data-message="Thank you for visiting. Buy me a coffee!" data-color="#F471FF" data-position="right"
-        data-x_margin="18" data-y_margin="18"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149531840-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    <script src="js/copy.js"></script>
+    <script data-name="BMC-Widget" src="https://cdn.buymeacoffee.com/widget/1.0.0/prod/widget.prod.min.js" data-id="rainer" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting. Buy me a coffee!" data-color="#F471FF" data-position="right" data-x_margin="18" data-y_margin="18"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149531840-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        gtag('config', 'UA-149531840-1');
-    </script>
-</body>
-
+  gtag('config', 'UA-149531840-1');
+</script></body>
 </html>
